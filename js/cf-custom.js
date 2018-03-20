@@ -7,7 +7,7 @@ getQuoteButton.addEventListener("click", get_quote());
 
 //var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 function get_quote() {
-  var requestURL = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&key";
+  var requestURL = "https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&key";
   var request = new XMLHttpRequest();
   request.open('GET', requestURL);
   request.responseType = 'json';
