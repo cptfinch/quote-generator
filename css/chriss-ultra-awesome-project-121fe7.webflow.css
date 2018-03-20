@@ -4,28 +4,6 @@
   color: #e74c3c;
 }
 
-.div-block {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: auto;
-  min-height: 100vh;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
 .quote-box {
   display: block;
   width: 450px;
@@ -51,10 +29,6 @@
   margin-top: 34px;
   margin-right: 80px;
   margin-left: 80px;
-}
-
-.button {
-  float: left;
 }
 
 .cf-social-media-buttons {
