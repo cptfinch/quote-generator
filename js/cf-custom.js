@@ -1,13 +1,16 @@
 var quoteDiv = document.querySelector('#quote');
+var authorSpan = document.querySelector('#authorSpan')
 var twitterButton = document.querySelector('#twitter-button');
 var tumblerButton = document.querySelector('#tumbler-button');
 var getQuoteButton = document.querySelector('#get-quote-button');
 
-getQuoteButton.addEventListener("click", get_quote());
+getQuoteButton.addEventListener("click", get_quote);
 
-//var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+/**
+ * This function is great!! 
+ */
 function get_quote() {
-  var requestURL = "https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&key";
+  var requestURL = "https://cors.io/?https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&key";
   var request = new XMLHttpRequest();
   request.open('GET', requestURL);
   request.responseType = 'json';
@@ -15,10 +18,12 @@ function get_quote() {
   request.onload = function () {
     var quote = request.response;
     populateQuoteDiv(quote);
+    populateAuthorSpan(quote);
   }
 }
-
+function populateAuthorSpan(jsonObj) { 
+  authorSpan.innerHTML = jsonObj['quoteAuthor'];
+ }
 function populateQuoteDiv(jsonObj) {
-  quoteDiv.textContent = jsonObj['quoteText'];
-  //header.appendChild(myH1);
+  quoteDiv.innerHTML = jsonObj['quoteText'];
 }
